@@ -1,0 +1,410 @@
+/*
+Project Name: Blank Template
+Client: Your Client
+Author: Your Name
+Developer @GA in NYC
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+/* Clear fix hack */
+.group:after{
+    display: block;
+    content: " ";
+    clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+html{font-size:100%;}
+
+body {
+    color: #606161;             /* light grey */
+    font-size: 1em;             /* 16px */
+    font-weight: 300;
+    line-height: 1.4;
+    background-color: #f0efef;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Center the container */
+.container {
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+.logo {
+    padding-top: .625em; /* 10px */
+}
+
+
+.visually-hidden {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+}
+
+.hidden{display: none;}
+
+.page header {
+    padding: 1.5em 0;           /* 24px 0 */
+    overflow: hidden;
+    background: #033048;        /* dark blue */
+}
+
+.main-content {margin: 2.5em auto 1.25em;}  /* 40px 20px */
+
+.post {
+    padding-bottom: 1.25em;     /* 20px */
+    border-bottom: 1px solid #033048;
+}
+
+.post,
+.post img,
+.sidebar ul,
+.about-us{margin-bottom: 1.25em;}   /* 20px */
+
+
+footer {
+    text-align: center;
+    background: #121212;        /* almost black */
+    padding: 3.125em 0 .625em; /* 50px 0 10px */
+}
+
+footer ul {margin: 3.125em 0;}  /* 50px */
+
+
+footer li {
+    margin: 0 .625em;          /* 10px */
+    display: inline;
+    list-style: none;
+}
+
+footer li a {padding: .5em;}   /* 8px */
+
+/* Landing page */
+
+.landing-page header {
+    padding: 1.5em 0 3em;       /* 24px 0 48px */
+    position: relative;
+    background: url(../images/header_bg.jpg) no-repeat top center #121212;
+    background-size: cover;
+}
+
+.benefits {padding: 3em 0; }    /* 48px 0 */
+
+.benefits ul {
+    list-style: disc;
+    margin: 1.25em 0 0 3.25em;  /* 20px 0 0 52px */
+}
+
+.testimonial {
+    color: white;
+    padding: 3em 0;             /* 48px 0 */
+    position: relative;
+}
+
+/* For anyone interested in adding opacity to a background (bg) image, I've removed the bg image and added relative positioning to the containing element (above) and implemented it as follows: */
+.testimonial:after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    z-index: -1;
+    position: absolute;
+    background: url(../images/testimonial_bg.jpg) no-repeat top center #071324;
+    background-size: cover;
+    opacity: 0.85;
+
+}
+
+
+/******************************************
+/* TYPOGRAPHY
+/*******************************************/
+
+.landing-page h1 {
+    color: white;
+    font-size: 2em;             /*32px*/
+    font-weight: 600;
+    text-align: center;
+    margin: 2.5em 0 1.875em;    /* rem / font-size(2em) */
+    margin: 5rem 0 3.75rem;     /* 80px 0 60px */
+}
+
+.landing-page h2 {
+    color: #033048;             /* dark blue */
+    font-size: 1.625em;         /*26px */
+    font-weight: 600;
+    margin-bottom: .615em;
+    margin-bottom: 1rem;         /*16px */
+}
+
+.testimonial blockquote {
+    margin: 0 auto;
+    font-size: 1.5em;         /*24px*/
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+}
+
+.testimonial blockquote span {
+    display: block;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.main-nav a,
+footer .logo {color: #f9e42e;}  /* yellow */
+
+.page h2 a,
+.readlink,
+.sidebar a,
+.sidebar h3,
+.sidebar p {color: #033048;}    /* dark blue */
+
+
+.main-nav a {
+    font-size: 1em;             /*16px*/
+    font-weight: 600;
+}
+
+.page h2 {
+    font-size: 1.625em;         /* 26px */
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: .769em;
+    margin-bottom: 1.25rem;        /* 20px */
+}
+
+.post p:first-of-type:first-letter {
+    float: left;
+    font-size: 3.25em;          /* 52px */
+    font-weight: 600;
+    line-height: 0.85;
+    padding:.4px 8px 8px 4px;
+    padding:.25rem .5rem .5rem .25rem;
+}
+
+p {margin-bottom:1.25em;}          /* 20px */
+
+.readlink {
+    display:block;
+    text-align: right;
+}
+
+.readlink,
+.about-us a {font-weight: 600;}
+
+.sidebar h3 {
+    font-size: 1.25em;          /* 20px */
+    font-weight: 800;
+    margin-bottom: .5em;       /* rem / font-size */
+    margin-bottom: .625rem;     /* 10px */
+}
+
+.about-us p {
+    font-size: .875em;         /* 14px */
+    line-height: 1.2;
+}
+
+footer p {
+    color: white;
+    font-size: .75em;          /* 12px */
+    font-weight: 600;
+}
+
+/******************************************
+/* MODULES
+/*******************************************/
+
+.button {
+    width: 10.44em;
+    width: 11.75rem;            /* 188px */
+    display: block;
+    margin: 0 auto;
+    padding: .666em 0;
+    padding: .75rem 0;         /* 12px 0 */
+    font-size: 1.125em;         /* 18px */
+    font-weight: 800;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.yellow {
+    color: #033048;
+    background: #f9e42e;        /* yellow */
+}
+
+.blue {
+    color: white;
+    font-size: 1em;             /* 16px */
+    background: #033048;        /* dark blue */
+}
+
+.newsletter-signup {
+    padding: 1.25em;          /* 20px */
+    text-align: center;
+    background: #f9e42e;        /* yellow */
+}
+
+
+
+
+.main-nav a {padding: .75em .25em;}  /* 12px 4px */
+.mobile-nav{float:right;}
+
+/* Phones -----------------------*/
+@media screen and (max-width:767px) {
+    .page header{padding-bottom:.5em;}
+    .logo img{
+        max-width: 130px;
+        height: auto;
+    }
+    .container{width:90%;}
+    .sidebar{text-align:center;}
+
+    .main-nav{
+        overflow:hidden;
+        clear:both;
+        margin-top:1em;
+        height:0;
+        transition:height 1s;
+    }
+    .main-nav.open{
+        height:17.5em; /* 280px */
+    }
+
+    .main-nav a {
+        display:block;
+        background:rgba(255,255,255,0.1);
+        margin-top:.5em; /*8px*/
+        padding-left: 1em;
+    }
+
+    /* Mobile Nav*/
+    .mobile-nav{
+        display: block;
+        position:relative;
+        margin-top:.4em;
+        height:2em;
+        width:2.25em;
+        transform:rotate(0deg);
+    }
+    .mobile-nav span{
+        position:absolute;
+        background: white;
+        width:100%;
+        height:3px;
+        border-radius:30px;
+        transition:all 1s;
+        transform:rotate(0deg);
+    }
+    .mobile-nav span:nth-child(1){top:0px;}
+    .mobile-nav span:nth-child(2){top:.625em;}
+    .mobile-nav span:nth-child(3){top:1.25em;}
+    .mobile-nav.open span:nth-child(1){
+        transform:rotate(45deg);
+        top: .625em; /* 10px */
+        left: 0px;
+    }
+    .mobile-nav.open span:nth-child(2){opacity:0;}
+    .mobile-nav.open span:nth-child(3){
+        transform:rotate(-45deg);
+        top: .625em; /* 10px */
+        left: 0px;
+    }
+
+    /* STATE */
+    a:active,
+    .main-nav a:active{color: white;}
+    .main-nav a:active {background:rgba(255,255,255,0.2);}
+
+    .page h2 a:active,
+    .readlink:active,
+    .sidebar a:active{color: #121212;}    /* almost black */
+
+    .blue:active{color: #f9e42e;}         /* yellow */
+}
+
+/* Tablet/Desktop -----------------------*/
+@media screen and (min-width:768px) {
+
+    /* BASE */
+    html{font-size:1.5em;}
+
+    a:hover,
+    .main-nav a:hover,
+    .page h1 a:hover,
+    .readlink:hover,
+    .sidebar a:hover{
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+        -webkit-transition:     all .1s;
+        -o-transition:          all .1s;
+        transition:             all .1s;
+    }
+
+    .button:hover{box-shadow: 2px 2px 5px rgba(0,0,0,0.4);}
+
+    /* LAYOUT */
+    .posts-section {
+        width: 72.92%;              /* 700/960 */
+        margin-right: 2%;           /* 20/960 */
+        vertical-align: top;
+        display: inline-block;
+    }
+
+    .sidebar {
+        width: 25%;                 /* 240/960 */
+        vertical-align: top;
+        display: inline-block;
+    }
+    .container{
+        padding-left:.25em;
+        padding-right:.25em;
+    }
+
+    .landing-page header {height:29em;}     /* 29em x 1.5em = 43.5em x 16px = 696px */
+    .testimonial blockquote {width: 60%;}
+
+    .main-nav {float:right;}
+    .main-nav a {margin-left:1.25em;}      /* 30/24 (ie.1.5 x 16px) */
+
+    /* STATE */
+    a:hover,
+    .main-nav a:hover{color: white;}
+
+    .page h2 a:hover,
+    .readlink:hover,
+    .sidebar a:hover{color: #121212;}    /* almost black */
+
+    .blue:hover{color: #f9e42e;}         /* yellow */
+}
